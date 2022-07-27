@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新聞雲 氣象模組iframe(mWeb)</title>
+
+
+<!-- GA流量統計碼 開始 -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42712477-42', 'http://events.ettoday.net/weather-iframe/', {'name': 'weatheriframe'});
+    ga('weatheriframe.require', 'displayfeatures');
+    ga('weatheriframe.send', 'pageview');
+
+</script>
+<!-- GA流量統計碼 開始 -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<link rel="stylesheet" type="text/css" href="css/weather-icons/weather-icons.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/style_mw.css">
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	var myHeight = $(".wrapper").innerHeight();
+	parent.fnDysonIframeH(myHeight);
+});
+</script>
+</head>
+
+<body>
+<div id="weather_tmp">
+
+	<!--wrapper 開始-->
+	<div class="wrapper">
+
+		<!--header 開始-->
+		<div class="header">
+			<!--房子人物圖 開始-->
+			<div class="pic">
+				<img src="images/m_bg_0-35.gif"/>
+			</div>
+			<!--房子人物圖 結束-->
+
+			<!--PM2.5 click event 開始-->
+			<script type="text/javascript">
+			$(function(){
+				$(".pic").css({"cursor":"pointer"});
+				$(".pic").click(function() {
+				  window.open("https://www.lg.com/tw/dehumidifier?cmpid=ETtodayAug")
+				});
+
+			});
+			</script>
+			<!--PM2.5 click event 結束-->
+
+			<!--info 開始-->
+			<div class="info">
+				<h2>[<span>良好</span>]</h2>
+				<p class="pmv">室外PM2.5指數</p>
+				<p class="number">21</p>	
+				<form>
+					<select name="location" id="location" onchange="changeCity()"><option value="65">新北市</option><option value="10014">臺東縣</option><option value="10020" selected="selected">嘉義市</option><option value="10007">彰化縣</option><option value="10004">新竹縣</option><option value="10008">南投縣</option><option value="9020">金門縣</option><option value="10015">花蓮縣</option><option value="63">臺北市</option><option value="10016">澎湖縣</option><option value="10010">嘉義縣</option><option value="10002">宜蘭縣</option><option value="68">桃園市</option><option value="10009">雲林縣</option><option value="64">高雄市</option><option value="10018">新竹市</option><option value="10017">基隆市</option><option value="66">臺中市</option><option value="10013">屏東縣</option><option value="67">臺南市</option><option value="9007">連江縣</option><option value="10005">苗栗縣</option>
+					</select>
+				</form>
+			</div>
+			<!--info 結束-->
+		</div>
+		<!--header 結束-->
+	
+			<!--container 開始-->
+			<div class="container">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<th width="25%" align="center">嘉義市</th>
+						<th width="35%" align="center">一週天氣預測</th>
+						<th width="40%" align="center"><a class="btn" href="iframe-md.phtml" target="_self">今日天氣</a></th>
+					</tr>
+		
+					<tr>
+						<td align="center">SAT</td>
+						<td align="center"><i class="wi wi-rain"></i></td>
+						<td align="center"><span class="up">↑</span>20°C <span class="down">↓</span>16°C </td>
+					</tr>
+			
+					<tr>
+						<td align="center">SUN</td>
+						<td align="center"><i class="wi wi-rain"></i></td>
+						<td align="center"><span class="up">↑</span>23°C <span class="down">↓</span>16°C </td>
+					</tr>
+			
+					<tr>
+						<td align="center">MON</td>
+						<td align="center"><i class="wi wi-day-cloudy"></i></td>
+						<td align="center"><span class="up">↑</span>22°C <span class="down">↓</span>16°C </td>
+					</tr>
+			
+					<tr>
+						<td align="center">TUE</td>
+						<td align="center"><i class="wi wi-cloud"></i></td>
+						<td align="center"><span class="up">↑</span>23°C <span class="down">↓</span>17°C </td>
+					</tr>
+			
+					<tr>
+						<td align="center">WED</td>
+						<td align="center"><i class="wi wi-cloud"></i></td>
+						<td align="center"><span class="up">↑</span>24°C <span class="down">↓</span>17°C </td>
+					</tr>
+			
+					<tr>
+						<td align="center">THU</td>
+						<td align="center"><i class="wi wi-cloud"></i></td>
+						<td align="center"><span class="up">↑</span>25°C <span class="down">↓</span>15°C </td>
+					</tr>
+			
+					<tr>
+						<td align="center">FRI</td>
+						<td align="center"><i class="wi wi-rain"></i></td>
+						<td align="center"><span class="up">↑</span>25°C <span class="down">↓</span>16°C </td>
+					</tr>
+			
+					<tr>
+						<td align="center">SAT</td>
+						<td align="center"><i class="wi wi-cloud"></i></td>
+						<td align="center"><span class="up">↑</span>25°C <span class="down">↓</span>17°C </td>
+					</tr>
+			
+				</table>
+		
+			<p class="copyright">The Weather Icons project created and maintained by Erik Flowers. v1.0 artwork by Lukas Bischoff. </p>
+		</div>
+		<!--container 結束-->
+	</div>
+	<!--wrapper 結束-->
+	</div>
+
+<script src="js/jquery.js"></script>
+
+<!--iframe RWD-->
+<script>
+document.domain = 'ettoday.net';
+$(function(){
+var iSonDocH;
+$(window).on("resize", function(){
+	iSonDocH = $("body").height();
+	$('#weather-iframe', window.parent.document).css({"height":iSonDocH});
+}).trigger("resize");
+});
+</script>
+<!--iframe RWD-->
+
+
+<script>
+var machine = 'mobile_list';
+var search_geo = 'no';
+if(search_geo == 'yes'){
+	var geoOptions = { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 };
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(getPosition,showError,geoOptions);
+	}else {
+		console.log("Geolocation is not supported by this browser.");
+	}
+}
+
+function changeCity(){
+	var select_value = document.getElementById("location").value;
+	//console.log(select_value);
+	var form_type = "change_location";
+	$.ajax({
+		url: '../sys/weather_ajax.phtml',
+		type: 'get',
+		data: {'form_type' : form_type, 'select_value' : select_value, 'machine' : machine},
+		success: function(data, status ) {
+			if(data){
+				$('#weather_tmp').html(data);
+			}
+		},
+	}); // end ajax call
+}
+
+
+function getPosition(position) {
+	//console.log("Latitude: " + position.coords.latitude + "Longitude: " + position.coords.longitude);
+	var latitude = position.coords.latitude;
+	var longitude = position.coords.longitude;
+	var form_type = 'search_geo';
+	$.ajax({
+		url: '../sys/weather_ajax.phtml',
+		type: 'get',
+		data: {'form_type' : form_type, 'latitude' : latitude, 'longitude' : longitude ,'machine' : machine},
+		success: function(data, status ) {
+			if(data){
+				$('#weather_tmp').html(data);
+			}
+		},
+	}); // end ajax call
+}
+
+function showError(error) {
+	switch(error.code) {
+		case error.PERMISSION_DENIED:
+			console.log("User denied the request for Geolocation.");
+			break;
+		case error.POSITION_UNAVAILABLE:
+			console.log("Location information is unavailable.");
+			break;
+		case error.TIMEOUT:
+			console.log("The request to get user location timed out.");
+			break;
+		case error.UNKNOWN_ERROR:
+			console.log("An unknown error occurred.");
+			break;
+	}
+}
+</script>
+</body>
+</html>

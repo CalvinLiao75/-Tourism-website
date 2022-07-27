@@ -1,0 +1,449 @@
+<html>
+<head>
+<title>布袋</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="tripp.css">
+<script>
+var wp = document.getElementsByClassName('ds_wallp');
+var ds1 = document.getElementsByClassName('ds_1');
+var ds2 = document.getElementsByClassName('ds_2');
+var ds3 = document.getElementsByClassName('ds_3');
+var ds4 = document.getElementsByClassName('ds_4');
+var ds5 = document.getElementsByClassName('ds_5');
+function close_ds(){
+	wp[0].style.display="none";
+	ds1[0].style.display="none";
+	ds2[0].style.display="none";
+	ds3[0].style.display="none";
+	ds4[0].style.display="none";
+	ds5[0].style.display="none";
+}
+function op_ds(num){
+	wp[0].style.display="block";
+	if(num==1){ds1[0].style.display="block";}
+	else if(num==2){ds2[0].style.display="block";}
+	else if(num==3){ds3[0].style.display="block";}
+	else if(num==4){ds4[0].style.display="block";}
+	else if(num==5){ds5[0].style.display="block";}
+}
+</script>
+<style>
+	.slider_container {
+  margin: 30px auto;
+  width: 580px;
+  height: 460px;
+  overflow: hidden;
+  position: relative;
+  border: 10px solid;
+  border-top-color: #856036;
+  border-left-color: #5d4426;
+  border-bottom-color: #856036;
+  border-right-color: #5d4426;
+  background-color: #f5f5f5;
+}
+.slider_container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  width: 100%;
+  height: 100%;
+  
+  animation: bk 25s linear;
+}
+.slider_container div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  left: 100%;
+  width: 100%;
+  -webkit-animation: round 25s linear infinite;
+  animation: round 25s linear infinite;
+}
+.slider_container div img {
+  width: 100%;
+}
+@-webkit-keyframes round {
+  4% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: 0;
+    /* 0 - 1秒 滑入*/
+  }
+  20% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: 0;
+    /* 1- 5秒靜止*/
+  }
+  24% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: -100%;
+    /* 5-6秒滑出*/
+  }
+  26% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    left: -100%;
+    /* 6-6.5秒變透明*/
+  } 
+  28% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    left: 100%;
+    /* 6.5-7秒回到起始位置*/
+  } 
+}
+@keyframes bk {
+  0% {
+    left: 0;
+    /* 初始位置*/
+  }
+  4% {
+    left: -100%;
+    /* 0 - 1秒 滑出*/
+  }   
+}
+
+@keyframes bk {
+  0% {
+    left: 0;
+    /* 初始位置*/
+  }
+  4% {
+    left: -100%;
+    /* 0 - 1秒 滑出*/
+  }  
+}
+.slider_container div:nth-child(5) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.slider_container div:nth-child(4) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+.slider_container div:nth-child(3) {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+.slider_container div:nth-child(2) {
+  -webkit-animation-delay: 15s;
+  animation-delay: 15s;
+}
+.slider_container div:nth-child(1) {
+  -webkit-animation-delay: 20s;
+  animation-delay: 20s;
+}
+.rwd_slider_container_wrapper {
+  margin: 30px auto !important;
+  width: 600px;
+}
+.rwd_slider_container {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 70%;
+  box-sizing: border-box;
+}
+.rwd_slider_container .slider_container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+	<nav>
+		<div class="banner">
+			<a class="title" href="布袋首頁.html"><font>布袋</font></a>
+			<ul>
+				<li><a href="景點.html" title="景點介紹">景點</a></li>
+				<li><a href="歷史.html" title="相關歷史">歷史</a></li>
+				<li><a href="交通.html" title="交通資訊">交通</a></li>
+				<li><a href="關於我們.html" title="關於我們">關於我們</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="content">
+		<h2>景點介紹</h2>
+		<div class="sight1" id="sight1">
+			<div class="sightname_odd">3D美術館</div>
+			<div class="comment">
+				<p><br>
+				#有趣的彩繪 #布袋人文景點
+				&emsp;&emsp;
+				<button class="btt" onclick="op_ds(1)">詳細內容</button>
+				<br>
+				<br>
+				</p>
+			</div>
+		</div>
+		<div class="sight2" id="sight2">
+			<div class="sightname_even">布袋漁市</div>
+			<div class="comment" style="text-align:left;">
+				<p><br>
+				<button class="btt" onclick="op_ds(2)">詳細內容</button>
+				&emsp;&emsp; #新鮮海鮮 #美食集散地
+				<br>
+				<br>
+				<br></p>
+			</div>
+		</div>
+		<a href="高跟1.html">
+		<div class="sight3" id="sight3">
+			<div class="sightname_odd">高跟鞋教堂</div>
+			<div class="comment">
+				<p><br>
+				#金氏世界紀錄 #造型建築物
+				&emsp;&emsp;
+				<button class="btt" onclick="op_ds(3)">詳細內容</button>
+				<br>
+				<br>
+				</p>
+			</div>
+		</div>
+		</a>
+		<div class="sight4" id="sight4">
+			<div class="sightname_even">洲南鹽場</div>
+			<div class="comment" style="text-align:left;">
+				<p><br>
+				<button class="btt" onclick="op_ds(4)">詳細內容</button>
+				&emsp;&emsp;#布袋人文景點 #古早味鹽田
+				<br>
+				<br>
+				<br>
+				</p>
+			</div>
+		</div>
+		
+		<div class="sight5" id="sight5">
+			<div class="sightname_odd">好美寮濕地</div>
+			<div class="comment">
+				<p><br>
+				#芬多精的味道 #海的聲音
+				&emsp;&emsp;
+				<button class="btt" onclick="op_ds(5)">詳細內容</button>
+				<br>
+				<br>
+				</p>
+			</div>
+		</div>
+		<div class="sight_nav">
+			<ul>
+				<li><a href="#sight1">3D美術館</a></li>
+				<li><a href="#sight2">布袋漁市</a></li>
+				<li><a href="#sight3">高跟鞋教堂</a></li>
+				<li><a href="#sight4">洲南鹽場</a></li>
+				<li><a href="#sight5">好美寮濕地</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ds_wallp">
+	<div class = "ds_outer">
+	<div class = "ds_inner">
+		<div class="ds_container">
+		<button class="bx" onclick="close_ds()">x</button>
+			<div class="ds_1">
+			
+				<dl>
+					<dt>
+					3D美術館
+					</dt>
+					<dd>
+					
+					好美里在藝術家進城及在地居民的攜手打造下，變的名副其實”好美”， 一幅幅創意有趣的3D彩繪串起好美里散步小徑，每幅作品都設計了數種互動拍照畫面，例如地心歷險中湍流急下的瀑布，拍照祕訣是側身站在懸崖邊仿佛就要掉進無地深淵，站到浴火重生的火鳳凰上一同馳騁翱翔，循著瀑布而上還有驚險萬分的救生圈等，只要發揮巧思就能拍出你的獨家紀念！
+					<div class="rwd_slider_container_wrapper">
+						<div class="rwd_slider_container">
+						  <div class="slider_container" >
+							<div>
+							  <img src="景點/3D彩繪村/0.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/3D彩繪村/1.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/3D彩繪村/2.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/3D彩繪村/3.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/3D彩繪村/4.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+						  </div><!-- end of .pure_slider_container -->
+						</div><!-- end of .embed-responsive -->
+					  </div>
+					  <p>
+						地點位置
+					  </p>
+					  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.42411361956!2d120.13553191497354!3d23.336644484794927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346c29ed42b4e0f5%3A0xe8631defe690ed3f!2z5aW9576O6YeMM0TmtbfmtIvkuJbnlYzmiLblpJbnvo7ooZPppKg!5e0!3m2!1szh-TW!2stw!4v1610472255202!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</dd>
+				</dl>
+			</div>
+			<div class="ds_2">
+			
+				<dl>
+					<dt>
+					布袋漁市
+					</dt>
+					<dd>					
+					布袋港於整建工程後，一躍成為國際化商港，不僅可以在觀光漁市品嘗新鮮的海味，也能從這裡搭船前往澎湖旅遊，或搭乘觀光漁筏出海欣賞美麗的溼地生態。布袋觀光魚市名聞遐邇，別錯過肥美的水產，可口的海鮮加工品更是最鮮的伴手禮，一間間熱炒的店面也提供最道地的布袋海鮮大飽口慾。
+					<div class="rwd_slider_container_wrapper">
+						<div class="rwd_slider_container">
+						  <div class="slider_container" >
+							<div>
+							  <img src="景點/魚市場/0.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/魚市場/1.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/魚市場/2.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/魚市場/3.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/魚市場/4.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+						  </div><!-- end of .pure_slider_container -->
+						</div><!-- end of .embed-responsive -->
+					  </div>
+					  <p>
+						地點位置
+					  </p>
+					  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.241368752452!2d120.15336995057066!3d23.379483908686318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346c282ba9bbdd97%3A0x4cb1ad2d032eba51!2z5biD6KKL5riv5ryB5biC!5e0!3m2!1szh-TW!2stw!4v1610473750954!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
+				</dd>
+				</dl>
+			</div>
+			<div class="ds_3">
+			
+				<dl>
+					<dt>
+					高跟鞋教堂
+					</dt>
+					<dd>					
+					玻璃高跟鞋象徵「每個小女孩都曾夢想有雙漂亮的高跟鞋，伴著自己走出美麗優雅的人生。」在臺灣，新娘嫁入夫家前，必須足蹬高跟鞋踩破瓦片，把過去不好的一切，像瓦片被踩破後丟棄。而幸福意象高跟鞋下的碎瓦片也都已一掃而空，象徵這裡正是幸福的起點！
+					<div class="rwd_slider_container_wrapper">
+						<div class="rwd_slider_container">
+						  <div class="slider_container" >
+							<div>
+							  <img src="景點/高跟鞋教堂/0.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/高跟鞋教堂/1.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/高跟鞋教堂/2.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/高跟鞋教堂/3.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/高跟鞋教堂/4.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+						  </div><!-- end of .pure_slider_container -->
+						</div><!-- end of .embed-responsive -->
+					  </div>
+					  <p>
+						地點位置
+					  </p>	
+					  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.2890915107564!2d120.14655595057057!3d23.37775680875132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346c282d1d84c23d%3A0x4eff3d0768a027da!2z6auY6Lef6Z6L5pWZ5aCC!5e0!3m2!1szh-TW!2stw!4v1610473697426!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
+				</dd>
+				</dl>
+			</div>
+			<div class="ds_4">
+			
+				<dl>
+					<dt>
+					洲南鹽場
+					</dt>
+					<dd>
+					
+					「洲南鹽場」是一塊「文化鹽田」，是布袋鹽業的歷史縱深、地方脈絡與生活情境的縮影。
+
+謝鹽祭是過去鹽工們在重要節日會準備祭品拜鹽田，感謝天地與眾神保佑鹽產豐收，2008年起，洲南鹽場於每年年末舉行謝鹽祭表達對土地的感謝，結合傳統產業文化，形成當代重要的文化節慶活動。
+<div class="rwd_slider_container_wrapper">
+	<div class="rwd_slider_container">
+	  <div class="slider_container" >
+		<div>
+			<img src="景點/鹽巴/0.JPG" alt="pure css slider" width="580" height="460px" />
+		  </div>
+		  <div>
+			<img src="景點/鹽巴/1.JPG" alt="pure css slider" width="580" height="460px" />
+		  </div>
+		  <div>
+			<img src="景點/鹽巴/2.JPG" alt="pure css slider" width="580" height="460px" />
+		  </div>
+		  <div>
+			<img src="景點/鹽巴/3.JPG" alt="pure css slider" width="580" height="460px" />
+		  </div>
+		  <div>
+			<img src="景點/鹽巴/4.JPG" alt="pure css slider" width="580" height="460px" />
+		  </div>
+	  </div><!-- end of .pure_slider_container -->
+	</div><!-- end of .embed-responsive -->
+  </div>
+  <p>
+	地點位置
+	</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.118370117972!2d120.16517635057077!3d23.383934708518595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e829a804cff93%3A0x85f9cca6c625673f!2z5rSy5Y2X6bm95aC0!5e0!3m2!1szh-TW!2stw!4v1610468858282!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					</dd>
+				</dl>
+			</div>
+			<div class="ds_5">
+			
+				<dl>
+					<dt>
+					好美寮濕地
+					</dt>
+					<dd>
+					八掌溪與龍宮溪兩條河流交會淤積，使得此處形成自然資源豐富的孕育場所，吸引許多候鳥留駐，區內豐富動植物林相常是遊客從事生態觀察的最佳場所，在這裡除了可清楚看到紅樹林外，水鳥的蹤跡也處處可尋，不管是在溼地間覓食的白鷺鷥，或是翱翔於天空中的蒼鷺、大卷尾，再搭配絕美的湖光水色，宛若人間天堂。
+					<div class="rwd_slider_container_wrapper">
+						<div class="rwd_slider_container">
+						  <div class="slider_container" >
+							<div>
+							  <img src="景點/好美寮/0.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/好美寮/1.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/好美寮/2.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/好美寮/3.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+							<div>
+							  <img src="景點/好美寮/4.JPG" alt="pure css slider" width="580" height="460px" />
+							</div>
+						  </div><!-- end of .pure_slider_container -->
+						</div><!-- end of .embed-responsive -->
+					  </div>
+					  <p>
+						地點位置
+					  </p>	
+					  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.694781470869!2d120.1290479505704!3d23.363069909304077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346c29be8a72f1bb%3A0x5d54592d18d2e39a!2z5aW9576O5a-u5rq85Zyw!5e0!3m2!1szh-TW!2stw!4v1610473800512!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
+				</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1165 @@
+<html class="html">
+	<head>
+		<meta charset="utf-8">
+		<title>布袋</title>
+	<style type="text/css">
+		html{
+			margin: 0;
+		padding: 0;
+		border: 0;
+		
+		}
+		
+		
+		
+		header,nav,label{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+        header,nav
+        {
+		display: block;
+	}
+        
+        #back{
+            max-width:100%;
+        }
+        #header {
+		background: #1c1c1c;
+		color: #d5d5d5;
+		cursor: default;
+		height: 5em;
+		left: 0;
+		line-height: 5em;
+		position: fixed;
+		text-align: right;
+		top: 0;
+		width: 100%;
+		z-index: 10001;
+	}
+	#header .inner {
+			max-width: 65em;
+			width: calc(100% - 6em);
+			margin: 0 auto;
+			position: relative;     
+         line-height:100px;
+		}
+   
+
+			@media screen and (max-width: 480px) {
+
+				#header .inner {
+					max-width: 90%;
+					width: 90%;
+				}
+
+			}
+	#header .logo {
+			/*font-family: 'Pacifico', cursive;*/
+			display: inline-block;
+			height: 60px;
+			left: -120px;
+			
+			line-height: 100px;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			color: white;
+			font-size: 35px;
+			text-transform: none;
+			font-weight: normal;
+			padding: 0;
+			
+		}
+		a.logo{
+			margin-top: 200px;
+		}
+	
+	 nav#nav{
+	 position:relative;
+  top:2px;
+  left:150px;
+  letter-spacing:0px;
+  line-height:100px;
+
+	 }
+	 nav{
+         margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	 }
+	 nav {
+		display: block;
+	}
+	#nav {
+		display: inline-block;
+        
+	}
+
+		@media screen and (max-width: 980px) {
+
+			#nav {
+				display: none;
+			}
+
+		}
+
+	
+
+		h2{
+			color: #E5474B;
+			font-size: 35px;
+		}
+	
+		
+
+	section .inner {
+		max-width: 65em;
+		width: calc(100% - 6em);
+		margin: 0 auto;
+	}
+        
+        
+        section.two{
+            width:100%
+        }
+
+		@media screen and (max-width: 480px) {
+
+			section .inner {
+				max-width: 90%;
+				width: 90%;
+			}
+
+		}
+ 
+   
+	
+	body.back{
+	background-color:white;
+		margin: 0px;
+		padding: 0;
+		overflow-x: hidden; 
+	}
+	a{
+	 text-decoration:none;
+	 font-family:"Lato", sans-serif;
+	   color: white;
+		padding:0px 29px;
+		font-weight:bold;
+		font-size:17px;
+	}
+        
+        
+    #banner{
+       max-width:100%;
+		padding: 280px 280px;
+		background-color: #0c0c0c;
+		
+		
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 15% left;
+		text-align: left;
+		position: relative;
+		z-index: 9999;
+            background-image: url("./3.jpg");
+        }
+   #banner:after {
+	
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			display: block;
+			top: 0;
+			left: 0;
+			background-color: #0c0c0c;
+			opacity: 0.25;
+		}
+        section.two{
+            background-color: white;
+            width:2600px;
+              height:600px;
+        }
+        
+        
+        
+        
+        
+        
+        body {
+  display: flex;
+  justify-content: flex-start;
+  align-items:baseline;
+  min-height: 50vh;
+  margin: 0;
+  padding: 0; 
+			overflow-x: hidden; 
+}
+
+ul.slides {
+  position:absolute;
+  top:10px;
+/*  left:-20px;*/
+  width:100%;
+  height: 800px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+li.slide {
+
+	margin: 0;
+  padding: 0;
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: Helvetica;
+  font-size: 120px;
+  color: #fff;
+  transition: .5s transform ease-in-out;
+}
+
+.slide:nth-of-type(1) {
+  background-color: ;
+}
+
+.slide:nth-of-type(2) {
+  background-color: #F25C05;
+  left: 100%;
+}
+
+.slide:nth-of-type(3) {
+  background-color: #495F8C;
+  left: 200%;
+}
+
+input[type="radio"] {
+  position: relative;
+  z-index: 100;
+  display: none;
+}
+
+.controls-visible {
+  position: absolute;
+  width: 100%;
+  bottom: 12px;
+  text-align: center;
+}
+
+.controls-visible label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 3px;
+  border: 2px solid #fff;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked ~ .controls-visible label:nth-of-type(1) {
+  background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked ~ .controls-visible label:nth-of-type(2) {
+  background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked ~ .controls-visible label:nth-of-type(3) {
+  background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked ~ .slide {
+  transform: translatex(0%);
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked ~ .slide {
+  transform: translatex(-100%);
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked ~ .slide {
+  transform: translatex(-200%);
+}
+
+
+/* Left/Right Button Classes Below */
+
+.navigator {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 100%;
+  z-index: 100;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  display: none;
+}
+
+.navigator i {
+  font-size: 32px;
+  color #333;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked ~ .navigator:nth-of-type(1) {
+  display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked ~ .navigator:nth-of-type(2) {
+  display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked ~ .navigator:nth-of-type(3) {
+  display: flex;
+}
+  
+		
+#more {display: none;}
+		
+		
+	
+
+		section#one{
+			position: absolute;
+			top:900px;
+			left:380px;
+			margin-left: -100px;
+		}
+		
+		a.button.alt{
+			position: absolute;
+			color: red;
+			  border: 1px solid #f44336;
+			padding: 10px 20px;
+			top: 250px;
+			left: 45px;
+		}
+		button{
+			color: red;
+		}
+		p{
+			font-family: "Lato", sans-serif;
+		font-size: 15pt;
+		font-weight: 300;
+		line-height: 2;
+		}
+		
+/*
+		div.buttom{
+			width:100%;
+			height:300px;
+			background-color:black;
+			margin-top: 2000px;
+*/
+/*			text-align: right;*/
+/*			z-index: 10003;*/
+	
+/*
+			padding: 0;
+			border: 0;
+*/
+	
+/*			vertical-align: baseline;*/
+			
+		}
+		buttom{
+			display: block;
+		}
+		
+		
+		body {
+		line-height: 1;
+	}
+
+		
+/*		頁底*/
+		
+		
+		footer{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+			
+			
+			
+	}
+		footer{
+		display: block;
+	}
+		
+		section#footer{
+margin-top: 2200px;
+			margin-left: -60px;
+		width: 100%;
+			
+		}
+		
+		
+		#footer {
+		background-color: #000000;
+		color: #f2a3a5;
+		padding: 4em 0 2em 0;
+		background: #000000;
+	}
+
+		#footer input, #footer select, #footer textarea {
+			color: #ffffff;
+		}
+
+		#footer a {
+			color: #ffffff;
+		}
+
+		#footer strong, #footer b {
+			color: #ffffff;
+		}
+
+		#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+			color: #fff;
+		}
+
+		#footer blockquote {
+			border-left-color: #fff;
+		}
+
+		#footer code {
+			background: none;
+			border-color: #fff;
+		}
+
+		#footer hr {
+			border-bottom-color: #fff;
+		}
+
+		#footer input[type="submit"],
+		#footer input[type="reset"],
+		#footer input[type="button"],
+		#footer button,
+		#footer .button {
+			background-color: #5a5a5a;
+			color: #ffffff !important;
+		}
+
+			#footer input[type="submit"]:hover,
+			#footer input[type="reset"]:hover,
+			#footer input[type="button"]:hover,
+			#footer button:hover,
+			#footer .button:hover {
+				background-color: #676767;
+			}
+
+			#footer input[type="submit"]:active,
+			#footer input[type="reset"]:active,
+			#footer input[type="button"]:active,
+			#footer button:active,
+			#footer .button:active {
+				background-color: #4d4d4d;
+			}
+
+			#footer input[type="submit"].alt,
+			#footer input[type="reset"].alt,
+			#footer input[type="button"].alt,
+			#footer button.alt,
+			#footer .button.alt {
+				background-color: transparent;
+				box-shadow: inset 0 0 0 2px #fff;
+				color: #ffffff !important;
+			}
+
+				#footer input[type="submit"].alt:hover,
+				#footer input[type="reset"].alt:hover,
+				#footer input[type="button"].alt:hover,
+				#footer button.alt:hover,
+				#footer .button.alt:hover {
+					background: rgba(255, 255, 255, 0.25);
+				}
+
+				#footer input[type="submit"].alt:active,
+				#footer input[type="reset"].alt:active,
+				#footer input[type="button"].alt:active,
+				#footer button.alt:active,
+				#footer .button.alt:active {
+					background-color: rgba(255, 255, 255, 0.2);
+				}
+
+				#footer input[type="submit"].alt.icon:before,
+				#footer input[type="reset"].alt.icon:before,
+				#footer input[type="button"].alt.icon:before,
+				#footer button.alt.icon:before,
+				#footer .button.alt.icon:before {
+					color: #f8d1d2;
+				}
+
+			#footer input[type="submit"].special,
+			#footer input[type="reset"].special,
+			#footer input[type="button"].special,
+			#footer button.special,
+			#footer .button.special {
+				background-color: #ffffff;
+				color: #e5474b !important;
+			}
+
+		#footer label {
+			color: #ffffff;
+		}
+
+		#footer input[type="text"],
+		#footer input[type="password"],
+		#footer input[type="email"],
+		#footer select,
+		#footer textarea {
+			background: none;
+			border-color: rgba(255, 255, 255, 0.25);
+		}
+
+			#footer input[type="text"]:focus,
+			#footer input[type="password"]:focus,
+			#footer input[type="email"]:focus,
+			#footer select:focus,
+			#footer textarea:focus {
+				border-color: #ffffff;
+				box-shadow: 0 0 0 1px #ffffff;
+			}
+
+		#footer .select-wrapper:before {
+			color: #fff;
+		}
+
+		#footer input[type="checkbox"] + label,
+		#footer input[type="radio"] + label {
+			color: #f2a3a5;
+		}
+
+			#footer input[type="checkbox"] + label:before,
+			#footer input[type="radio"] + label:before {
+				background: none;
+				border-color: #fff;
+			}
+
+		#footer input[type="checkbox"]:checked + label:before,
+		#footer input[type="radio"]:checked + label:before {
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color: #e5474b;
+		}
+
+		#footer input[type="checkbox"]:focus + label:before,
+		#footer input[type="radio"]:focus + label:before {
+			border-color: #ffffff;
+			box-shadow: 0 0 0 1px #ffffff;
+		}
+
+		#footer ::-webkit-input-placeholder {
+			color: #f8d1d2 !important;
+		}
+
+		#footer :-moz-placeholder {
+			color: #f8d1d2 !important;
+		}
+
+		#footer ::-moz-placeholder {
+			color: #f8d1d2 !important;
+		}
+
+		#footer :-ms-input-placeholder {
+			color: #f8d1d2 !important;
+		}
+
+		#footer .formerize-placeholder {
+			color: #f8d1d2 !important;
+		}
+
+		#footer .inner {
+			max-width: 65em;
+			width: calc(100% - 6em);
+			margin: 0 auto;
+		}
+
+			@media screen and (max-width: 480px) {
+
+				#footer .inner {
+					max-width: 90%;
+					width: 90%;
+				}
+
+			}
+
+		#footer .copyright {
+			font-size: 0.9em;
+			margin: 0 0 2em 0;
+			padding: 0;
+			color: #FFFFFF;
+			font-size: 17px;
+		}
+
+			#footer .copyright a {
+				color: #FFFFFF;
+				font-size: 17px;
+			}
+
+		@media screen and (max-width: 980px) {
+
+			#footer {
+				padding: 4em 0 2em 0;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#footer {
+				padding: 2em 0 0.1em 0;
+			}
+
+		}
+		
+/*		表單*/
+		
+	form {
+		margin: 0 0 2em 0;
+	}
+
+	form .field {
+			margin: 0 0 2em 0;
+		}
+
+	
+
+	form .field.half.first {
+					padding: 0 1em 0 0;
+/*					float: left;*/
+					
+				}
+	form .field.half {
+				width: 100%;
+				padding: 0 0 0 0em;
+				float: left;
+			
+			}
+
+		form > .actions {
+			margin: 2.5em 0 0 0 !important;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			form .field {
+				margin: 0 0 1.5em 0;
+			}
+
+				form .field.half {
+					padding: 0 0 0 0.75em;
+				}
+
+					form .field.half.first {
+						padding: 0 0.75em 0 0;
+					}
+
+			form > .actions {
+				margin: 2em 0 0 0 !important;
+			}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			form .field.half {
+				width: 100%;
+				float: none;
+				padding: 0;
+			}
+
+				form .field.half.first {
+					padding: 0;
+				}
+
+		}
+
+	label {
+		display: block;
+		font-size: 0.9em;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin: 0 0 1em 0;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		border-radius: 0;
+		border: none;
+		border: solid 3px;
+		color: inherit;
+		display: block;
+		outline: 0;
+		padding: 0 1em;
+		text-decoration: none;
+		width: 100%;
+	}
+
+		input[type="text"]:invalid,
+		input[type="password"]:invalid,
+		input[type="email"]:invalid,
+		select:invalid,
+		textarea:invalid {
+			box-shadow: none;
+		}
+
+	.select-wrapper {
+		text-decoration: none;
+		display: block;
+		position: relative;
+	}
+
+		.select-wrapper:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.select-wrapper:before {
+			content: '\f078';
+			display: block;
+			height: 2.75em;
+			line-height: 2.75em;
+			pointer-events: none;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 0;
+			width: 2.75em;
+		}
+
+		.select-wrapper select::-ms-expand {
+			display: none;
+		}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select {
+		height: 2.75em;
+	}
+
+	textarea {
+		padding: 0.75em 1em;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		display: block;
+		float: left;
+		margin-right: -2em;
+		opacity: 0;
+		width: 1em;
+		z-index: -1;
+	}
+
+		input[type="checkbox"] + label,
+		input[type="radio"] + label {
+			text-decoration: none;
+			cursor: pointer;
+			display: inline-block;
+			font-size: 1em;
+			font-weight: 300;
+			padding-left: 2.4em;
+			padding-right: 0.75em;
+			position: relative;
+		}
+
+			input[type="checkbox"] + label:before,
+			input[type="radio"] + label:before {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				font-family: FontAwesome;
+				font-style: normal;
+				font-weight: normal;
+				text-transform: none !important;
+			}
+
+			input[type="checkbox"] + label:before,
+			input[type="radio"] + label:before {
+				border-radius: 0;
+				border: solid 1px;
+				content: '';
+				display: inline-block;
+				height: 1.65em;
+				left: 0;
+				line-height: 1.58125em;
+				position: absolute;
+				text-align: center;
+				top: 0;
+				width: 1.65em;
+			}
+
+		input[type="checkbox"]:checked + label:before,
+		input[type="radio"]:checked + label:before {
+			content: '\f00c';
+		}
+
+	input[type="checkbox"] + label:before {
+		border-radius: 0;
+	}
+
+	input[type="radio"] + label:before {
+		border-radius: 100%;
+	}
+
+	::-webkit-input-placeholder {
+		opacity: 1.0;
+	}
+
+	:-moz-placeholder {
+		opacity: 1.0;
+	}
+
+	::-moz-placeholder {
+		opacity: 1.0;
+	}
+
+	:-ms-input-placeholder {
+		opacity: 1.0;
+	}
+
+	.formerize-placeholder {
+		opacity: 1.0;
+	}
+
+	label {
+		color: #e5474b;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea {
+		background: none;
+		border-color: #fceced;
+	}
+
+		input[type="text"]:focus,
+		input[type="password"]:focus,
+		input[type="email"]:focus,
+		select:focus,
+		textarea:focus {
+			border-color: #e5474b;
+			box-shadow: 0 0 0 1px #e5474b;
+		}
+
+	.select-wrapper:before {
+		color: #e5474b;
+	}
+
+	input[type="checkbox"] + label,
+	input[type="radio"] + label {
+		color: #111111;
+	}
+
+		input[type="checkbox"] + label:before,
+		input[type="radio"] + label:before {
+			background: none;
+			border-color: #e5474b;
+		}
+
+	input[type="checkbox"]:checked + label:before,
+	input[type="radio"]:checked + label:before {
+		background-color: #e5474b;
+		border-color: #e5474b;
+		color: #ffffff;
+	}
+
+	input[type="checkbox"]:focus + label:before,
+	input[type="radio"]:focus + label:before {
+		border-color: #e5474b;
+		box-shadow: 0 0 0 1px #e5474b;
+	}
+
+	::-webkit-input-placeholder {
+		color: #717171 !important;
+	}
+
+	:-moz-placeholder {
+		color: #717171 !important;
+	}
+
+	::-moz-placeholder {
+		color: #717171 !important;
+	}
+
+	:-ms-input-placeholder {
+		color: #717171 !important;
+	}
+
+	.formerize-placeholder {
+		color: #717171 !important;
+	}
+		
+		
+		
+/*		按鈕*/
+		.button1{
+		width: 150px;
+		height: 50px;
+		
+		color:#FF0000;
+  		background-color:#fff;
+  		border:2px #FF0000 solid;	
+			
+  		border-radius:10px;
+  		cursor:pointer;
+		margin-bottom: 50px;
+			margin-left: 800px;
+		}
+
+		.button1:hover{
+border:0;
+  		background-color:#FF0000;
+  		color:#fff;
+}
+			
+		input {
+				font-size: 12pt;
+			}
+		ul.alt {
+			list-style: none;
+			padding-left: 0;
+		}
+
+			ul.alt li {
+				border-top: solid 1px;
+				padding: 0.5em 0;
+			}
+
+				ul.alt li:first-child {
+					border-top: 0;
+					padding-top: 0;
+				}
+			ul.alt li {
+		border-top-color: #e5474b;
+	}
+		
+		input.alt{
+			padding: 1em 1em 1em 1em;
+			font-size: 20px;
+			border: 5px;
+			margin-left: -40px;
+			
+		}
+		li::marker{
+			color: black;
+		}
+		
+		
+		a{
+			margin-top: 20px;
+			margin-left: -30px;
+		}
+		
+		
+		</style>
+	</head>
+	<body class="back">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="布袋首頁.html" class="logo">布袋</a>
+					<nav id="nav">
+						<a href="景點.html">景點</a>
+						<a href="歷史.html">歷史</a>
+						<a href="交通.html">交通</a>
+                        <a href="關於我們.html">關於我們</a>
+					</nav>
+				</div>
+			</header>
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Banner -->
+			<ul class="slides">
+  <input type="radio" id="control-1" name="control" checked>
+  <input type="radio" id="control-2" name="control">
+  <input type="radio" id="control-3" name="control">
+  
+  <!--  Left/Right Button  -->
+<!--
+  <div class="navigator slide-1">
+    <label for="control-3">
+      <i class="fas fa-chevron-left"></i>
+    </label>
+    <label for="control-2">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+  
+  <div class="navigator slide-2">
+    <label for="control-1">
+      <i class="fas fa-chevron-left"></i>
+    </label>
+    <label for="control-3">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+  
+  <div class="navigator slide-3">
+    <label for="control-2">
+      <i class="fas fa-chevron-left"></i>
+    </label>
+    <label for="control-1">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+-->
+  <!--  /Left/Right Button  -->
+  
+  <li class="slide"><img src="3.jpg" width="4000"></li>
+  <li class="slide"><img src="6.jpg"></li>
+  <li class="slide"><img src="nacl1.jpg"></li>
+  
+  <div class="controls-visible">
+    <label for="control-1"></label>
+    <label for="control-2"></label>
+    <label for="control-3"></label>
+  </div>
+</ul>
+		
+			<section id="one">
+				<div class="inner">
+					<header>
+						<h2>布袋簡介</h2>
+					</header>
+<!--
+					<p>
+布袋鎮是典型的漁村聚落，舊稱「冬港」，老一輩慣稱「布袋嘴」。據說是因為布袋溪地形突出於海中潟湖內，地形狹長，外來的船隻必須由一定的港口入港，有如布袋口，因此得名。民國三十四年到三十八年間，布袋與廈門開始有了貨運的通航，鎮內商賈雲集，商旅往返極盛一時，太平路上人潮來來往往，使布袋贏得「小上海」的美譽。
+</p>
+-->
+					<p>布袋鎮是典型的漁村聚落，舊稱「冬港」，老一輩慣稱「布袋嘴」。據說是因為布袋溪地形突出於海中潟湖內，地形狹長，外來的船隻必須由一定的港口入港，有如布袋口，因此得名。民國三十四年到三十八年間，布袋與廈門開始有了貨運的通航，鎮內商賈雲集，商旅往返極盛一時，太平路上人潮來來往往，使布袋贏得「小上海」的美譽。<span id="dots">...</span><span id="more">如今，布袋港已正式升格國內商港，港口南方有了一大區的海埔新生地，讓人
+悠享長堤沙灘、夕陽晚霞，好美寮的生態溼地召喚著人們前去親近遊賞，也讓布
+袋增添了閒逸之情。從商業、鹽業、到如今以養殖漁業為主，布袋人正以其堅韌
+的生命力，不斷尋找著新的出口。</span></p>
+					<button onclick="myFunction()" id="myBtn" class="button1">Read more</button>
+					
+					<video controls>
+  <source src="布袋.mp4" type="video/mp4">
+  <source src="布袋.webm" type="video/webm">
+  <p>Your browser doesn't support HTML5 video. Here is
+     a <a href="https://www.youtube.com/watch?v=f81OKjakQiE&feature=youtu.be">link to the video</a> instead.</p>
+</video>
+					
+					<script  >
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+						
+						
+function sendMail() {
+   let fields = {
+    name: document.querySelector("#name").value,
+    tel: document.querySelector("#email").value,
+	   message: document.querySelector("#message").value,
+   };
+   let body = '姓名：' + fields.name + '<br>'
+              + '電話：' + fields.tel + '<br>'
+   				+ '訊息：' + fields.message ;
+   Email.send({
+    SecureToken: "你的token",
+    To: '收件者',
+    From: "寄件者",
+    Subject: "主旨",
+    Body: body,
+   }).then(
+    message => alert(message)
+   );
+  }
+</script>
+					
+<!--
+					<ul class="actions">
+						<a href="#" class="button alt">Learn More</a>
+					</ul>
+-->
+				</div>
+								
+			</section>
+		
+<!--		<div class="buttom" style=""></div>	-->
+	<section id="footer">
+				<div class="inner">
+					<header>
+						<h2>Get in Touch</h2>
+					</header>
+					<form method="post" action="#">
+						<div class="field half first">
+							<label for="name" >Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+<!--						<h1>message</h1>-->
+						<div class="field">
+							<label for="message" >message</label>
+							<textarea name="message" id="message" rows="6"></textarea>
+						</div>
+						
+						<ul class="actions">
+							<li><input type="button" value="sendMail" class="alt" ></li>
+						</ul>
+						
+					</form>
+					<div class="email">
+							<a  href="mailto:s1074558@mail.ncyu.edu.tw?subject=來信詢問&body=對我們有甚麼建議嗎"> Email:s1074558@mail.ncyu.edu.tw</a></div>
+				</div>
+			</section>
+
+	</body>
+	      
+			
+</html>

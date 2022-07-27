@@ -1,0 +1,280 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		<title>布袋</title>
+	
+	</head>
+		
+		<script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+<link href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css"></link>
+<script type="text/javascript" src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script>		
+
+<style type="text/css">	
+html{
+			margin: 0;
+		padding: 0;
+		border: 0;
+		
+		}
+		
+		
+		
+		header,nav,label{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+        header,nav
+        {
+		display: block;
+	}
+        
+        #back{
+            max-width:100%;
+        }
+        #header {
+		background: #1c1c1c;
+		color: #d5d5d5;
+		cursor: default;
+		height: 5em;
+		left: 0;
+		line-height: 5em;
+		position: fixed;
+		text-align: right;
+		top: 0;
+		width: 100%;
+		z-index: 10001;
+	}
+	#header .inner {
+			max-width: 65em;
+			width: calc(100% - 6em);
+			margin: 0 auto;
+			position: relative;     
+         line-height:100px;
+		}
+   
+
+			@media screen and (max-width: 480px) {
+
+				#header .inner {
+					max-width: 90%;
+					width: 90%;
+				}
+
+			}
+	#header .logo {
+			/*font-family: 'Pacifico', cursive;*/
+			display: inline-block;
+			height: 60px;
+			left: -120px;
+			
+			line-height: 100px;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			color: white;
+			font-size: 35px;
+			text-transform: none;
+			font-weight: normal;
+			padding: 0;
+			
+		}
+		a.logo{
+			margin-top: 200px;
+		}
+	
+	 nav#nav{
+	 position:relative;
+  top:2px;
+  left:150px;
+  letter-spacing:0px;
+  line-height:100px;
+
+	 }
+	 nav{
+         margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	 }
+	 nav {
+		display: block;
+	}
+	#nav {
+		display: inline-block;
+        
+	}
+
+		@media screen and (max-width: 980px) {
+
+			#nav {
+				display: none;
+			}
+
+		}
+	
+	a{
+	 text-decoration:none;
+	 font-family:"Lato", sans-serif;
+	   color: white;
+		padding:0px 29px;
+		font-weight:bold;
+		font-size:17px;
+	}
+	img{
+		width: 80%;
+		height: 1000px;
+		margin-top: 70px;
+	margin-left: 200px;
+	}
+        
+		h2{
+			color: #E5474B;
+			font-size: 35px;
+		}
+	p{
+			font-family: "Lato", sans-serif;
+		font-size: 15pt;
+		font-weight: 300;
+		line-height: 2;
+		}
+		
+		
+	section .inner {
+		max-width: 65em;
+		width: calc(100% - 6em);
+		margin: 0 auto;
+	}
+        
+        
+        section.two{
+            width:100%
+        }
+
+		@media screen and (max-width: 480px) {
+
+			section .inner {
+				max-width: 90%;
+				width: 90%;
+			}
+
+		}
+	
+	
+</style>
+
+	
+		<body class="back">
+	
+		<!-- Header -->
+			<header id="header">
+				
+				<div class="inner">
+					<a href="布袋首頁.html" class="logo">布袋</a>
+					<nav id="nav">
+						<a href="景點.html">景點</a>
+						<a href="歷史.html">歷史</a>
+						<a href="交通.html">交通</a>
+                        <a href="關於我們.html">關於我們</a>
+					</nav>
+				</div>
+			</header>
+			
+			
+			
+<div id="nanogallery2"></div>
+<script>
+$("#nanogallery2").nanogallery2({
+thumbnailWidth: 200, // 縮圖寬度
+thumbnailHeight: 200, // 縮圖高度
+galleryDisplayMode: "moreButton",
+galleryDisplayMoreStep: 2, // 最多顯示幾行
+items: [{
+src: 'https://4.bp.blogspot.com/-1g7zj-oB-s4/XFO0dywZTVI/AAAAAAAAYRk/_t7XrH7YtQoCp67gHxZ4pskAHX9TUnqHQCLcBGAs/s1600/cc0-image-stock-license.jpg',
+srct: 'https://4.bp.blogspot.com/-1g7zj-oB-s4/XFO0dywZTVI/AAAAAAAAYRk/_t7XrH7YtQoCp67gHxZ4pskAHX9TUnqHQCLcBGAs/s300/cc0-image-stock-license.jpg',
+title: 'pic 1'
+}, {
+src: 'https://2.bp.blogspot.com/-MQgmDdWOn5s/WoEcbqEIWPI/AAAAAAAAWXo/h8U_GHIW75obyskVvwgGQlD3ji0gjU7NACLcBGAs/s1600/will-google-close-blogger-business-analysis.jpg',
+srct: 'https://2.bp.blogspot.com/-MQgmDdWOn5s/WoEcbqEIWPI/AAAAAAAAWXo/h8U_GHIW75obyskVvwgGQlD3ji0gjU7NACLcBGAs/s300/will-google-close-blogger-business-analysis.jpg',
+title: 'pic 2'
+}, {
+src: 'https://4.bp.blogspot.com/-Vp6_fuEU8zM/V7vRUTEb-HI/AAAAAAAAOJE/9YVKsFPH6Tk1ADOnOK_yU44EXCthIY75gCLcB/s1600/blogger-free-consultant.jpg',
+srct: 'https://4.bp.blogspot.com/-Vp6_fuEU8zM/V7vRUTEb-HI/AAAAAAAAOJE/9YVKsFPH6Tk1ADOnOK_yU44EXCthIY75gCLcB/s300/blogger-free-consultant.jpg',
+title: 'pic 3'
+}, {
+src: 'https://1.bp.blogspot.com/-Kix19BaDmNE/Wy4Y_U_3uPI/AAAAAAAAXPY/nIwxapAva4QVDYpZLcFssWe4_q7KkDvVgCLcBGAs/s1600/mobile-detect-webview-fb-line-in-app.jpg',
+srct: 'https://1.bp.blogspot.com/-Kix19BaDmNE/Wy4Y_U_3uPI/AAAAAAAAXPY/nIwxapAva4QVDYpZLcFssWe4_q7KkDvVgCLcBGAs/s300/mobile-detect-webview-fb-line-in-app.jpg',
+title: 'pic 4'
+}, {
+src: 'https://1.bp.blogspot.com/-G607thP7cWc/XDg22TxSSUI/AAAAAAAAYLc/bWQMrxhgneEBSKKiJ3TCuqYnxpcAyofVACLcBGAs/s1600/picasa-url-parameter.jpg',
+srct: 'https://1.bp.blogspot.com/-G607thP7cWc/XDg22TxSSUI/AAAAAAAAYLc/bWQMrxhgneEBSKKiJ3TCuqYnxpcAyofVACLcBGAs/s300/picasa-url-parameter.jpg',
+title: 'pic 5'
+}, {
+src: 'https://1.bp.blogspot.com/-fuPZuDAdv4s/XGN84O7JSkI/AAAAAAAAYV0/1LcgeouMQ18tWegvK11vz1qHDweOLtXZACLcBGAs/s1600/github-api-upload-file.jpg',
+srct: 'https://1.bp.blogspot.com/-fuPZuDAdv4s/XGN84O7JSkI/AAAAAAAAYV0/1LcgeouMQ18tWegvK11vz1qHDweOLtXZACLcBGAs/s300/github-api-upload-file.jpg',
+title: 'pic 6'
+}, {
+src: 'https://2.bp.blogspot.com/-Bc-JyEZwpG4/W6LTpxNm2mI/AAAAAAAAXpg/Tf-GhNpvFLICCg_6ICW3y4Er4trMozW3gCLcBGAs/s1600/seo-fake-information-identification.jpg',
+srct: 'https://2.bp.blogspot.com/-Bc-JyEZwpG4/W6LTpxNm2mI/AAAAAAAAXpg/Tf-GhNpvFLICCg_6ICW3y4Er4trMozW3gCLcBGAs/s300/seo-fake-information-identification.jpg',
+title: 'pic 7'
+}, {
+src: 'https://3.bp.blogspot.com/-lo1NZ0KVZSU/WRrNvclwESI/AAAAAAAAPjQ/k50YaNha-1YlzwU0qtHwbhBoLfXPll1iACLcB/s1600/how-to-become-top-blog-writer.jpg',
+srct: 'https://3.bp.blogspot.com/-lo1NZ0KVZSU/WRrNvclwESI/AAAAAAAAPjQ/k50YaNha-1YlzwU0qtHwbhBoLfXPll1iACLcB/s300/how-to-become-top-blog-writer.jpg',
+title: 'pic 8'
+}]
+});
+</script>
+			<section id="one">
+				<div class="inner">
+					<header>
+						<h2>關於我們</h2>
+					</header>
+<!--
+					<p>
+布袋鎮是典型的漁村聚落，舊稱「冬港」，老一輩慣稱「布袋嘴」。據說是因為布袋溪地形突出於海中潟湖內，地形狹長，外來的船隻必須由一定的港口入港，有如布袋口，因此得名。民國三十四年到三十八年間，布袋與廈門開始有了貨運的通航，鎮內商賈雲集，商旅往返極盛一時，太平路上人潮來來往往，使布袋贏得「小上海」的美譽。
+</p>
+-->
+					<p>
+					製作團隊
+						嘉義大學資管系大三<br>
+						范姜承靖1074533<br>
+						廖昱泳1074558<br> 
+						
+						石煌旭1074559 <br>
+						王伯元1074529<br>
+						蔡宗宸1074548 <br>
+						高大濰1064619<br>
+									</p>
+					
+					<h2>設計構想</h2>
+				<p>
+					我們網站設計的主要內容是介紹嘉義縣布袋鎮的特色，包含當地的美食、景點以及文化，
+					<br>架設一個屬於布袋鎮的旅遊網站。透過我們不斷地走訪與實地勘察，並結合當地居民的口述，<br>產出了一個富有溫度的旅遊網頁
+					
+					
+					
+					
+					
+					
+					</p>
+					
+					
+				
+					
+<!--
+					<ul class="actions">
+						<a href="#" class="button alt">Learn More</a>
+					</ul>
+-->
+				</div>
+								
+			</section>
+		
+				</body>
+</html>

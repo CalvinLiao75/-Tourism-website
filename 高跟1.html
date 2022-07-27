@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<style>
+	div{
+		display: block;
+	}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+/*
+	width: 787px;
+	height:275px;
+*/
+}
+	body{
+		width: 40%;
+		height:500px;
+	margin-top: 100px;
+		margin-left: 100px;
+		float: left;	
+	}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+	div.row{
+height: 40px;
+	}
+	
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+	
+	html{
+			margin: 0;
+		padding: 0;
+		border: 0;
+		
+		}
+		
+		
+		
+		header,nav,label{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+        header,nav
+        {
+		display: block;
+	}
+        
+        #back{
+            max-width:100%;
+        }
+        #header {
+		background: #1c1c1c;
+		color: #d5d5d5;
+		cursor: default;
+		height: 5em;
+		left: 0;
+		line-height: 5em;
+		position: fixed;
+		text-align: right;
+		top: 0;
+		width: 100%;
+		z-index: 10001;
+	}
+	#header .inner {
+			max-width: 65em;
+			width: calc(100% - 6em);
+			margin: 0 auto;
+			position: relative;     
+         line-height:100px;
+		}
+   
+
+			@media screen and (max-width: 480px) {
+
+				#header .inner {
+					max-width: 90%;
+					width: 90%;
+				}
+
+			}
+	#header .logo {
+			/*font-family: 'Pacifico', cursive;*/
+			display: inline-block;
+			height: 60px;
+			left: -120px;
+			
+			line-height: 100px;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			color: white;
+			font-size: 35px;
+			text-transform: none;
+			font-weight: normal;
+			padding: 0;
+			
+		}
+		a.logo{
+			margin-top: 200px;
+		}
+	
+	 nav#nav{
+	 position:relative;
+  top:2px;
+  left:150px;
+  letter-spacing:0px;
+  line-height:100px;
+
+	 }
+	 nav{
+         margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	 }
+	 nav {
+		display: block;
+	}
+	#nav {
+		display: inline-block;
+        
+	}
+
+		@media screen and (max-width: 980px) {
+
+			#nav {
+				display: none;
+			}
+
+		}
+	
+	a{
+	 text-decoration:none;
+	 font-family:"Lato", sans-serif;
+	   color: white;
+		padding:0px 29px;
+		font-weight:bold;
+		font-size:17px;
+	}
+	
+        
+		h2{
+			color: #E5474B;
+			font-size: 35px;
+		}
+	p{
+			font-family: "Lato", sans-serif;
+		font-size: 15pt;
+		font-weight: 300;
+		line-height: 2;
+		}
+		
+		
+	section .inner {
+		max-width: 65em;
+		width: calc(100% - 6em);
+		margin: 0 auto;
+	}
+        
+        
+        section.two{
+            width:100%
+        }
+
+		@media screen and (max-width: 480px) {
+
+			section .inner {
+				max-width: 90%;
+				width: 90%;
+			}
+
+		}
+	div.main{
+float: left;
+	}
+
+	div.info{
+		font-size: 55px;
+		width: 600px;
+		float: left;
+		margin-left: 900px;
+		margin-top: -650px;
+		font-weight:bold;
+	}
+	p.tel{
+font-size: 35px;
+	}
+	
+	div.text{
+		width: 1300px;
+		margin-top: 900px;
+		margin-left: 100px;
+	}
+	div.time{
+font-weight:bold;
+	font-size: 55px;
+		margin-left: 150px;
+		margin-top: 100px;
+	}
+	p.timer{
+		width: 500px;
+		margin-left: 400px;
+		font-size: 45px;
+	}
+	div.traffic{
+		background-color: #F1F1F1;
+		width:1500px;
+		height: 2000px;
+		margin-left: 100px;
+	}
+	p.time1{
+font-weight:bold;
+	font-size: 55px;
+		margin-left: 50px;
+		margin-top: 100px;
+	}
+	p.text1{
+			font-family: "Lato", sans-serif;
+		font-size: 15pt;
+		font-weight: 300;
+		line-height: 2;
+		margin-left: 100px;
+		}
+		
+	iframe{
+margin-left: 100px;
+		width: 1200px;
+		height: 1200px;
+	}
+</style>
+<body>
+	<header id="header">
+				
+				<div class="inner">
+					<a href="布袋首頁.html" class="logo">布袋</a>
+					<nav id="nav">
+						<a href="景點.html">景點</a>
+						<a href="歷史.html">歷史</a>
+						<a href="交通.html">交通</a>
+                        <a href="關於我們.html">關於我們</a>
+					</nav>
+				</div>
+			</header>
+<div class="main">
+<h2 style="text-align:center">高跟鞋教堂</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="高11.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="高22.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="高33.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="高44.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="888.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="高55.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="高1111.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="高22.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="高33.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="高44.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="888.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="高555.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+	</div>
+	
+	
+	<div class="info">
+		資訊
+		<p class="tel">電話:  &nbsp;&nbsp;  06-786-1000</p>
+		<p class="tel">地址:  &nbsp;&nbsp;  嘉義縣布袋鎮海興街6號</p>
+		<p class="tel">經緯度:  &nbsp;&nbsp;  120.14875/23.377751</p>
+		<p class="tel">停車位:  &nbsp;&nbsp;  有</p>
+	</div>
+	<div class="text">
+	<p>高跟鞋教堂高度約17m，寬度約11m，主結構由1,269根鋼架組成，外表共約320餘片玻璃，造型相當亮麗美觀，其設計與裝設不僅是全臺第一，更是全世界唯一。高跟鞋教堂幸福意象工程施工相當不易，320餘片玻璃大小、安裝角度皆不同，必須克服高跟鞋的形狀及彎曲幅度，故鋼架及玻璃組裝精度要求極高。玻璃高跟鞋象徵「每個小女孩都曾夢想有雙漂亮的高跟鞋，伴著自己走出美麗優雅的人生。」</p>
+	</div>
+	<div class="time">開放時間</div>
+	<p class="timer">全天候開放</p>
+	<div class="traffic">
+		<p class="time1">交通資訊</p>
+		<p class="text1">
+		（交通資訊常有變動，出發前請先向各交通場站確認。）<br>
+自行開車：<br>
+1.國道1號-水上交流道下-縣道168（往朴子方向）-縣道161。<br>
+2.東西快速道路-太保交流道下-縣道168（往朴子方向）-縣道161。<br>
+ 
+
+大眾運輸：<br>
+1.搭臺鐵至新營站下-轉搭台灣好行西濱快線61路線至高跟鞋教堂站下。<br>
+2.搭高鐵至嘉義站下-轉搭西濱快捷線168路線至高跟鞋教堂站下。<br>
+無障礙交通資訊<br>
+大眾運輸︰<br>
+
+1.搭臺鐵至新營站下-轉搭台灣好行西濱快線61路線（低地板需先預約）至高跟鞋教堂站下。<br>
+2..搭高鐵或臺鐵至嘉義站下-轉搭阿里山客運西濱快捷線168路線（低地板）至高跟鞋教堂站下。<br>
+		</p>
+		<iframe class"map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.289091508743!2d120.14656131522476!3d23.377756808825488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346c282d1d84c23d%3A0x4eff3d0768a027da!2z6auY6Lef6Z6L5pWZ5aCC!5e0!3m2!1szh-TW!2stw!4v1610477201593!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+	
+	
+</html>
